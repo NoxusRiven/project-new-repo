@@ -16,7 +16,8 @@
                 <p>Druga osoba walcząca</p>
                 
                 <input type="text" name="osoba2" class="input">
-                <input type="submit" value="Dodaj głosowanie" class="button">
+                <p><input type="submit" value="Dodaj głosowanie" class="button"></p>
+                <p><a class="button" href="bets.php">Powrót</a></p>
             </form>
         </div>
     </main>

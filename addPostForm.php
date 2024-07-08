@@ -19,7 +19,7 @@
                 <input type="text" name="naglowek" class="input">
                 <p>Treść wpisu</p>
                 <textarea name="tresc" cols="20" rows="10" class="input"></textarea>
-                <input type="submit" value="Dodaj wpis" class="button">
+                <p><input type="submit" value="Dodaj wpis" class="button"></p>
             </form>
             <p><a href="community.php" class="button">Powrót do strony</a></p>
         </div>

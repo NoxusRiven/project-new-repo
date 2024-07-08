@@ -11,12 +11,10 @@
         $result = $conn->query($sql);
         if ($result->num_rows == 1) 
         {
-            $user = $result->fetch_object();
-            //var_dump($user);
-
+            $user=$result->fetch_object();
             $_SESSION["login"] = $login;
-            $_SESSION["id"] = $user->id;
-
+            $_SESSION["id"] = $user->id; // Ustawienie id użytkownika w sesji
+            echo "Zalogowano: " . $_SESSION["id"];
             header("Location: index.php");
         } 
         else 

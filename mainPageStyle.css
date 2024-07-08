@@ -14,10 +14,10 @@ body
 
 header 
 {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1
@@ -58,6 +58,12 @@ nav a:hover
     text-decoration: underline;
 }
 
+nav a.wybrany
+{
+    color: #ec601f;
+    text-decoration: underline;
+}
+
 main
 {
     flex: 1;
@@ -95,7 +101,7 @@ footer
 {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer p 
@@ -115,13 +121,15 @@ footer p
     max-width: 800px;
 }
 
-.input {
+.input 
+{
     width: calc(60% - 20px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #dddddd;
     border-radius: 5px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .file 
@@ -137,7 +145,8 @@ footer p
 
 .button
 {
-    width: 50%;
+    width: 30%;
+    height: 40px;
     padding: 10px;
     background-color: #f0ad4e;
     border: none;
@@ -146,6 +155,21 @@ footer p
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+.button-a
+{
+    width: 30%;
+    height: 20px;
+    padding: 10px;
+    background-color: #f0ad4e;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none;
 }
 
 .button:hover 
@@ -241,3 +265,83 @@ footer p
 {
     background-color: #b96f08;
 }
+
+.menuDiv 
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+}
+
+.menuDiv h1 
+{
+    text-align: center;
+    margin: 0;
+}
+
+.menuIcon {
+    position: absolute;
+    left: 470px;
+    transform: translateY(-75%);
+    cursor: pointer;
+}
+
+.menuContainer 
+{
+    position: relative;
+    display: inline-block;
+
+}
+
+.menu-list 
+{
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7); 
+    border: 1px solid #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    top: 70%;
+    left: 450px;
+}
+
+.menu-list p
+{
+    font-size: 18px;
+}
+  
+.menu-list li 
+{
+    padding: 10px;
+}
+  
+.menu-list li a 
+{
+    color: #ee9922;
+    text-decoration: none;
+    font-size: 18px;
+}
+  
+.menu-list.active 
+{
+    display: block;
+    animation: fadeIn 0.2s ease-in-out forwards;
+}
+  
+@keyframes fadeIn 
+{
+    from 
+    {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to 
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  

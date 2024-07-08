@@ -1,7 +1,7 @@
 <?php
     require("database.php");
-    
     $zdjecie = basename($_FILES["zdjecie"]["name"]);
+    echo $zdjecie;
     move_uploaded_file($_FILES["zdjecie"]["tmp_name"], "Event_Images/$zdjecie");
     $tytul = $_POST["tytul"];
     $data = $_POST["data"];
